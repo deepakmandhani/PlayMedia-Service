@@ -10,18 +10,18 @@
         android:id="@+id/sound_data_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="50dp" />
 
     <Button
         android:id="@+id/continue_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
+        android:background="@color/colorAccent"
+        android:enabled="false"
         android:padding="10dp"
         android:text="Continue to next"
-        android:textColor="#FFFFFF"
-        android:background="@color/colorAccent"
-        android:enabled="false"/>
+        android:textColor="#FFFFFF" />
 
     <ProgressBar
         android:id="@+id/progress_bar"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:indeterminate="true"
-        android:visibility="visible"/>
+        android:visibility="visible" />
 
     <ImageView
         android:id="@+id/other_view"
@@ -37,6 +37,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:src="@drawable/error"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
 </FrameLayout>

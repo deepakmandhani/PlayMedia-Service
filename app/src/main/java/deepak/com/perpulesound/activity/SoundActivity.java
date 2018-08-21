@@ -76,10 +76,9 @@ public class SoundActivity extends AppCompatActivity implements ISoundView {
         unbinder = ButterKnife.bind(this);
         initDI();
         soundPresenter.setiSoundView(this);
-        if(isNetworkConeected()) {
+        if (isNetworkConeected()) {
             soundPresenter.getSoundData();
-        }
-        else {
+        } else {
             soundPresenter.fetchResponseFromDB();
         }
     }

@@ -55,8 +55,6 @@ public class SoundService extends Service implements MediaPlayer.OnPreparedListe
     public void onPrepared(MediaPlayer mediaPlayer) {
         if (mediaPlayer.equals(this.mediaPlayer)) {
             mediaPlayer.start();
-            Log.d("SoundService", "PLayting 127");
-
         }
     }
 
@@ -81,7 +79,6 @@ public class SoundService extends Service implements MediaPlayer.OnPreparedListe
             mediaPlayer.release();
             mediaPlayer = nextMediaPlayer;
             mediaPlayer.start();
-            Log.d("SoundService", "PLayting 73");
         } else {
             mediaPlayer.reset();
             try {
@@ -90,7 +87,6 @@ public class SoundService extends Service implements MediaPlayer.OnPreparedListe
                 e.printStackTrace();
             }
             mediaPlayer.prepareAsync();
-            Log.d("SoundService", "prepare  82");
         }
         if (++soundNumber < dataList.size())
             prepareNextSound(soundNumber);
@@ -105,7 +101,6 @@ public class SoundService extends Service implements MediaPlayer.OnPreparedListe
             e.printStackTrace();
         }
         nextMediaPlayer.prepareAsync();
-        Log.d("SoundService", "prepare  115");
     }
 
     public void stopSound() {
